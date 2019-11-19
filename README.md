@@ -1,7 +1,7 @@
 # ush-schedule-fixer
 
 1) Open Firefox
-2) Install the Tampermonkey Add-On
+2) Install the Tampermonkey Add-On (https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/)
 3) Click on the Tampermonkey icon in the toolbar
 4) Click on "Create a new script"
 5) Copy & paste the contents of script.js into the new script
