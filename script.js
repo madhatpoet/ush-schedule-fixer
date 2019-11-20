@@ -2,15 +2,16 @@
 // Welcome to the USH Schedule Fixer
 // Created by : Nicole Tabat
 //--------------------------------------------------------------------------------------------------------------
-//
-//
-//--------------------------------------------------------------------------------------------------------------
-// Add venues here:
+// Add venues:
 //--------------------------------------------------------------------------------------------------------------
 // ["Abbreviation of the Venue", "Full Name of the Venue", "Color you want it to be"]
-// For custome colors go to the link below and copy paste the color code next to Hex (including the #)
+//
+// For custom colors:
+//
+// Option 1: Go to this link and copy paste the color code next to "Hex" (including the #)
 // https://htmlcolorcodes.com/color-picker/
-// Also you can go to this link and just used the listed color name on the left
+//
+// Option 2: Go to to this link and just use the listed color name on the left
 // https://www.w3schools.com/cssref/css_colors.asp
 
 var venues = [ ["ulsb","Upper Lot Starbucks", "red"], ["llsb","Lower Lot Starbucks", "blue"] ];
@@ -128,7 +129,7 @@ if (biggerText == "on")
     addGlobalStyle("#gridSchedule{font-size:12pt;}");
 }
 
-//This starts the script
+//Starts the script
 schedule_fix();
 
 
