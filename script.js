@@ -131,6 +131,3 @@ if (biggerText == "on")
 
 //Starts the script
 schedule_fix();
-
-
-
