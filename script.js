@@ -24,6 +24,10 @@ var venues = [ ["ulsb","Upper Lot Starbucks", "red"], ["llsb","Lower Lot Starbuc
 var betterSpacing = "on";
 var biggerText = "on";
 
+var am_pm_coloring = "on";
+var am_color = "orange";
+var pm_color = "purple";
+
 //--------------------------------------------------------------------------------------------------------------
 // -------------------------------------Don't change anything below this line-----------------------------------
 //--------------------------------------------------------------------------------------------------------------
@@ -47,9 +51,9 @@ function adjust_time(time)
     if (hour>12)
     {
         hour -= 12;
-        return hour + ":" + hm[1] + spacer +"PM"
+        return "<span class='pm'>" + hour + ":" + hm[1] + spacer +"PM" + "</span>"
     }
-    return time + spacer + "AM";
+    return "<span class='am'>" + time + spacer + "AM"  + "</span>";
 }
 
 function venue_span(day_html, venue_abbr, venue_name)
@@ -127,6 +131,11 @@ if (betterSpacing == "on")
 if (biggerText == "on")
 {
     addGlobalStyle("#gridSchedule{font-size:12pt;}");
+}
+if (am_pm_coloring == "on")
+{
+    addGlobalStyle(".am{color:" + am_color + "\;}");
+    addGlobalStyle(".pm{color:" + pm_color + "\;}");
 }
 
 //Starts the script
