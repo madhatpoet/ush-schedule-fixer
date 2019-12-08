@@ -48,9 +48,12 @@ function adjust_time(time)
     var hm = time.split(":");
     var hour = parseInt(hm[0]);
     var spacer = " ";
-    if (hour>12)
+    if (hour>=12)
     {
-        hour -= 12;
+        if (hour!=12)
+        {
+            hour -= 12;
+        }
         return "<span class='pm'>" + hour + ":" + hm[1] + spacer +"PM" + "</span>"
     }
     return "<span class='am'>" + time + spacer + "AM"  + "</span>";
