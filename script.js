@@ -101,7 +101,7 @@ function schedule_fix()
             time2 = time2.replace("- ","");
 
             day_html = day_html.replace(time1, adjust_time(time1))
-            day_html = day_html.replace(time2, adjust_time(time2))
+            day_html = day_html.replace(time2, adjust_time(time2) + "\n<br>")
 
         }
 
