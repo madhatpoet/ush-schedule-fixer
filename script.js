@@ -34,7 +34,7 @@ var pm_color = "purple";
 
 // ==UserScript==
 // @name         USH Schedule Fixer
-// @version      0.1
+// @version      1.0
 // @description  Fixes USH schedules
 // @author       Nicole Tabat
 // @match        https://myschedule.nbcuni.com/
