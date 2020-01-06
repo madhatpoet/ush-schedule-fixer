@@ -28,13 +28,15 @@ var am_pm_coloring = "on";
 var am_color = "orange";
 var pm_color = "purple";
 
+var shift_duration_fix = "on";
+
 //--------------------------------------------------------------------------------------------------------------
 // -------------------------------------Don't change anything below this line-----------------------------------
 //--------------------------------------------------------------------------------------------------------------
 
 // ==UserScript==
 // @name         USH Schedule Fixer
-// @version      1.0
+// @version      1.1
 // @description  Fixes USH schedules
 // @author       Nicole Tabat
 // @match        https://myschedule.nbcuni.com/
@@ -110,6 +112,17 @@ function schedule_fix()
         {
             var venue = venues[v];
             day_html = venue_span(day_html, venue[0], venue[1]);
+        }
+        
+        //Changes shift length to be actual shift length
+        //Note: Does not change total hours for week (Marked this for later)
+        if(shift_duration_fix == "on")
+        {
+            var time_switch = [["7.4h","8h"],["7.9h","8.5h"],["8.4h","9h"],["8.9h","9.5h"],["9.4h","10h"],["9.9h","10.5h"],["10.4h","11h"],["10.9h","11.5h"],["11.4h","12h"],]
+            for(var ts = 0; i<time_switch.length; i++)
+            {
+                day_html = day_html.replace(time_switch[ts][0], time_switch[ts][1])
+            }
         }
 
         //Updates the page for that day
