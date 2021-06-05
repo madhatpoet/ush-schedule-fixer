@@ -36,10 +36,10 @@ var shift_duration_fix = "on";
 
 // ==UserScript==
 // @name         USH Schedule Fixer
-// @version      1.1
+// @version      1.2
 // @description  Fixes USH schedules
 // @author       Nicole Tabat
-// @match        https://myschedule.nbcuni.com/
+// @match        https://myschedule.nbcuni.com/*
 // ==/UserScript==
 
 /*! jQuery v3.3.1 | (c) JS Foundation and other contributors | jquery.org/license */
@@ -113,7 +113,7 @@ function schedule_fix()
             var venue = venues[v];
             day_html = venue_span(day_html, venue[0], venue[1]);
         }
-        
+
         //Changes shift length to be actual shift length
         //Note: Does not change total hours for week (Marked this for later)
         if(shift_duration_fix == "on")
