@@ -10,3 +10,5 @@
 
 ***
 If you want to add venues, change the colors, or you want to turn off the text size increase > All the settings are clearly labeled at the top of the script file. Just click on the Tampermonkey icon again, then "Dashboard" and finally "USH Schedule Fixer" to open the script. Be sure to save when you're done.
+
+Note: This tool is only supported on desktop / laptop browsers.
